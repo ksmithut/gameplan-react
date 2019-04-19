@@ -1,0 +1,9 @@
+{
+  "name": "gameplan-react",
+  "version": "0.0.0",
+  "description": "A gameplan to create a react app",
+  "tags": [
+    "gameplan"
+  ],
+  "main": "index.js"
+}
