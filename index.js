@@ -145,6 +145,7 @@ exports.run = ({ options, operations }) => {
 
   operations.spawn('git', ['init'])
   operations.json(packageJSON, ['package.json'])
+  operations.copy(['templates', '.gitignore'], ['.gitignore'])
 
   const installCommand = options.yarn ? 'yarn' : 'npm'
   const installArg = options.yarn ? 'add' : 'install'
