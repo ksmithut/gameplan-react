@@ -123,7 +123,7 @@ exports.run = ({ options, operations }) => {
   // Linting
   {
     const ext = options.typescript ? 'ts' : 'js'
-    const src = `'src/**/*.${ext}`
+    const src = `'src/**/*.${ext}'`
     packageJSON.scripts.format = `prettier-eslint ${src} --write`
     packageJSON.scripts.lint = `eslint ${src} && prettier-eslint ${src} --list-different`
     devDependencies
