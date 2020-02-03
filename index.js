@@ -89,7 +89,13 @@ exports.run = ({ options, operations }) => {
     .add('react-scripts')
     .add('react')
     .add('react-dom')
+  dependencies.add('react-hook-form')
+  dependencies.add('@emotion/core').add('@emotion/styled')
 
+  operations.copy(
+    ['templates', 'src', 'react-app-env.d.ts'],
+    ['src', 'react-app-env.d.ts']
+  )
   operations.copy(['templates', 'tsconfig.json'], ['tsconfig.json'])
   devDependencies.add('@types/jest')
   devDependencies
