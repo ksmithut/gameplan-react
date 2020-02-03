@@ -100,10 +100,8 @@ exports.run = ({ options, operations }) => {
 
   // Linting
   {
-    const ext = 'js'
-    const src = `'src/**/*.${ext}'`
-    packageJSON.scripts.format = `prettier-eslint ${src} --write`
-    packageJSON.scripts.lint = `eslint ${src} && prettier-eslint ${src} --list-different`
+    packageJSON.scripts.format = `prettier-standard`
+    packageJSON.scripts.lint = `prettier-standard --lint --check`
     devDependencies
       .add('eslint')
       .add('eslint-config-standard')
@@ -113,7 +111,7 @@ exports.run = ({ options, operations }) => {
       .add('eslint-plugin-promise')
       .add('eslint-plugin-standard')
       .add('eslint-plugin-react')
-      .add('prettier-eslint-cli')
+      .add('prettier-standard')
     operations.copy(['templates', '.eslintrc'], ['.eslintrc'])
   }
 
