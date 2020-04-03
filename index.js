@@ -90,7 +90,7 @@ exports.run = ({ options, operations }) => {
     .add('react')
     .add('react-dom')
   dependencies.add('react-hook-form')
-  dependencies.add('@emotion/core').add('@emotion/styled')
+  dependencies.add('styled-components')
 
   operations.copy(
     ['templates', 'src', 'react-app-env.d.ts'],
